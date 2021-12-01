@@ -1,7 +1,7 @@
 {
-  "name": "airbnb-style",
-  "version": "2.0.0",
-  "description": "A mostly reasonable approach to JavaScript.",
+  "name": "Code-Style-Guide",
+  "version": "1.0.0",
+  "description": "A mostly reasonable approach to React JavaScript Typescript Sass UnitTest ...",
   "scripts": {
     "preinstall": "npm run install:config && npm run install:config:base",
     "postinstall": "rm -rf node_modules/markdownlint-cli/node_modules/markdownlint",
@@ -19,12 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/airbnb/javascript.git"
+    "url": "https://github.com/DTStack/Code-Style-Guide.git"
   },
   "keywords": [
     "style guide",
     "lint",
-    "airbnb",
     "es6",
     "es2015",
     "es2016",
@@ -33,12 +32,12 @@
     "react",
     "jsx"
   ],
-  "author": "Harrison Shoff <hi@hshoff.com> (https://twitter.com/hshoff)",
+  "author": "mumiao@dtstack.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airbnb/javascript/issues"
+    "url": "https://github.com/DTStack/Code-Style-Guide/issues"
   },
-  "homepage": "https://github.com/airbnb/javascript",
+  "homepage": "https://github.com/DTStack/Code-Style-Guide",
   "devDependencies": {
     "markdownlint": "^0.24.0",
     "markdownlint-cli": "^0.29.0"
