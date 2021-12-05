@@ -82,8 +82,8 @@ This style guide is mostly based on the standards that are currently prevalent i
 ## Naming
 
   - **Extensions**: Use `.jsx` extension for React components. eslint: [`react/jsx-filename-extension`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
-  - **Filename**: Use PascalCase for filenames. E.g., `ReservationCard.jsx`.
-  - **Reference Naming**: Use PascalCase for React components and camelCase for their instances. eslint: [`react/jsx-pascal-case`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
+  - **Filename**: Use camelCase for filenames. E.g., `reservationCard.jsx`. React filenames: [`filename-rule`](https://dtstack.yuque.com/rd-center/sm6war/fhg5vx)
+  - **Reference Naming**: Use PascalCase for React components and camelCase for their instances. eslint: [`react/jsx-pascal-case`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md).
 
     ```jsx
     // bad
