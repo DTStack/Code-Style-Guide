@@ -19,7 +19,7 @@ This style guide is mostly based on the standards that are currently prevalent i
   1. [Parentheses](#parentheses)
   1. [Tags](#tags)
   1. [Methods](#methods)
-  1. [hooks](#hooks)
+  1. [Hooks](#hooks)
   1. [Ordering](#ordering)
   1. [`isMounted`](#ismounted)
 
@@ -551,13 +551,37 @@ We don’t recommend using indexes for keys if the order of items may change.
     }
     ```
 
+  - The methods name should start with handle which means this method is for handling some problems. And the methods which are exported by component should start with on.
 
-## hooks
+    ```tsx
+    // bad
+    <Button onClick={onClick} />
+
+    // good
+    <Button onClick={handleClick} />
+
+    // bad
+    const handleClick = () => {
+      props.methodFromParentComponent();
+    }
+
+     // bad
+    const handleClick = () => {
+      props.onClick();
+    }
+    ```
+
+
+## Hooks
 
   - Don't call hooks inside loops, conditions, or nested functions. Only call hooks at the top level.
     > Why? React relies on the order in which Hooks are called.
 
   - Only Call Hooks from React Functions or custom hooks.
+
+  - The dispatch action method should start with set. Like `const [count, setCount] = useState(0);`
+  - The depths in `useCallback` and `useEffect` and etc. should NOT be forgot.
+  - It's significant to remove an event listener in the return function when add an event listener in `useEffect`. It also same applies to `setTimeout`, `setInterval` and `requestAnimationFrame`.
 
 
 ## Ordering
