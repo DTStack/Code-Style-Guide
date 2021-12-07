@@ -20,3 +20,9 @@ Because software is often written by different people throughout its life cycle.
   - Regular code can reduce maintenance costs
   - Normative code facilitates code review
   - Getting into the habit of code specification helps programmers grow
+
+## Thank you
+Thanks for helping us as we sort through the code specification:
+
+- [TypeScript style guide](https://ts.dev/style/#identifiers)
+- [airbnb](https://github.com/airbnb/javascript)
