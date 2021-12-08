@@ -153,15 +153,15 @@ We encourage some combination of OOCSS and BEM for these reasons:
 
   ```css
   /* ListingCard.css */
-  .ListingCard { ... }
-  .ListingCard-featured { ... }
-  .ListingCard_title { ... }
-  .ListingCard_content { ... }
+  .listing-card { }
+  .listing-card-featured { }
+  .listing-card_title { }
+  .listing-card_content { }
   ```
 
-  - `.ListingCard` is the “block” and represents the higher-level component
-  - `.ListingCard_title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
-  - `.ListingCard-featured` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
+  - `.listing-card` is the “block” and represents the higher-level component
+  - `.listing-card_title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
+  - `.listing-card-featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
 
 ### ID selectors
 
