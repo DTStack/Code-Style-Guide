@@ -58,8 +58,8 @@ Finally, properties are what give the selected elements of a rule declaration th
 
   ```css
   /* some selector */ {
-    background: #f1f1f1;
     color: #333;
+    background: #f1f1f1;
   }
   ```
 
@@ -84,7 +84,7 @@ Finally, properties are what give the selected elements of a rule declaration th
   ```css
   .avatar{
       border-radius:50%;
-      border:2px solid white; }
+      border:2px solid #fff;}
   .no, .nope, .not_good {
       // ...
   }
@@ -98,7 +98,7 @@ Finally, properties are what give the selected elements of a rule declaration th
   ```css
   .avatar {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid #fff;
   }
 
   .one,
@@ -142,13 +142,10 @@ We encourage some combination of OOCSS and BEM for these reasons:
   function ListingCard() {
     return (
       <article class="ListingCard ListingCard--featured">
-
         <h1 class="ListingCard__title">Adorable 2BR in the sunny Mission</h1>
-
         <div class="ListingCard__content">
           <p>Vestibulum id ligula porta felis euismod semper.</p>
         </div>
-
       </article>
     );
   }
@@ -156,15 +153,15 @@ We encourage some combination of OOCSS and BEM for these reasons:
 
   ```css
   /* ListingCard.css */
-  .ListingCard { }
-  .ListingCard--featured { }
-  .ListingCard__title { }
-  .ListingCard__content { }
+  .listing-card { }
+  .listing-card-featured { }
+  .listing-card_title { }
+  .listing-card_content { }
   ```
 
-  - `.ListingCard` is the “block” and represents the higher-level component
-  - `.ListingCard__title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
-  - `.ListingCard--featured` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
+  - `.listing-card` is the “block” and represents the higher-level component
+  - `.listing-card_title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
+  - `.listing-card-featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
 
 ### ID selectors
 
