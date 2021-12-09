@@ -1,5 +1,9 @@
 # Code Style Guide
 
+> Our project is based on the [airbnb](https://github.com/airbnb/javascript) and [TypeScript style guide](https://ts.dev/style/#identifiers) project fork to adapt the specification for the Dtstack Frontend Team.
+> Compared to the original, it integrates the Dtstack Frontend Team specification, adds the latest JS and React features, and unit testing.
+> We plan to sort out a set of corresponding link rules according to the specifications in the future and integrate them into our projects for actual production and development.
+
 ## Code Style guide directory
 
   - [React](react/README.md)
