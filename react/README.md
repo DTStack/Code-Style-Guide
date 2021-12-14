@@ -565,7 +565,7 @@ We don’t recommend using indexes for keys if the order of items may change.
       props.methodFromParentComponent();
     }
 
-     // bad
+    // good
     const handleClick = () => {
       props.onClick();
     }
