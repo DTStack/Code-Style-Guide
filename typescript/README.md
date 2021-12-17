@@ -249,6 +249,15 @@ There are two types of comments, JSDoc (`/** ... _/`) and non-JSDoc ordinary com
 -   Use `/** JSDoc _/` comments for documentation, i.e. comments a user of the code should read.
 -   Use `// line comments` for implementation comments, i.e. comments that only concern the implementation of the code itself.
 
+```ts
+// Bad
+const active: boolean = true;  // is current tab
+
+// Good
+// is current tab
+const active: boolean = true;
+```
+
 JSDoc comments are understood by tools (such as editors and documentation generators), while ordinary comments are only for other humans.
 
 #### JSDoc rules follow the JavaScript style
@@ -2027,6 +2036,22 @@ TypeScripts `any` type is a super and subtype of all other types, and allows der
 - Use `unknown`
 - Suppress the lint warning and document why
 
+#### Any attribute
+
+Sometimes we want an interface to allow any other attributes in addition to the required and optional attributes. At this time, we can use the form of index signature to meet the above requirements.
+
+```ts
+interface Person {
+  name: string;
+  age?: number;
+  [propName: string]: any;
+}
+
+const p1 = { name: "semlinker" };
+const p2 = { name: "lolo", age: 5 };
+const p3 = { name: "kakuqo", sex: 1 };
+```
+
 #### Providing a more specific type
 
 Use interfaces, an inline object type, or a type alias:
@@ -2074,6 +2099,16 @@ danger.whoops(); // This access is completely unchecked!
 ```
 
 To safely use `unknown` values, narrow the type using a type guard
+
+```ts
+let value: unknown;
+let value1: unknown = value; // OK
+let value2: any = value; // OK
+let value3: boolean = value; // Error
+let value4: number = value; // Error
+```
+
+`unknown` type can only be assigned to `any` type and `unknown` type itself.
 
 #### Suppressing `any` lint warnings
 
