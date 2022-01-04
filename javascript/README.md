@@ -1121,7 +1121,7 @@
     const inherits = require('inherits');
     function PeekableQueue(contents) {
       Queue.apply(this, contents);
-    }
+    };
     inherits(PeekableQueue, Queue);
     PeekableQueue.prototype.peek = function () {
       return this.queue[0];
@@ -1607,6 +1607,16 @@
 
     // good
     const binary = 2 ** 10;
+    ```
+  <a name="optional--chaining"></a>
+  - [12.4](#optional--chaining) The optional chaining (?.) expression can short-circuit with a return value of undefined. Therefore, treating an evaluated optional chaining expression as a function, object, number, etc., can cause TypeError or unexpected results. eslint: [`no-unsafe-optional-chaining`](https://eslint.org/docs/rules/no-unsafe-optional-chaining#disallow-use-of-optional-chaining-in-contexts-where-the-undefined-value-is-not-allowed-no-unsafe-optional-chaining).
+    > This rule aims to detect some cases where the use of optional chaining doesn't prevent runtime errors. In particular, it flags optional chaining expressions in positions where short-circuiting to undefined causes throwing a TypeError afterward.
+    ```javascript
+    // bad
+    (obj?.foo)();
+
+    // good
+    (obj?.foo)?.();
     ```
 
 **[⬆ back to top](#table-of-contents)**
